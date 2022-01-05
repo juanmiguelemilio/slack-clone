@@ -31,7 +31,7 @@ const Register = () => {
                 <div>
                 <h2>Register</h2>
                 <div>
-                    <label htmlFor=''>email:</label>
+                    <label htmlFor=''>E-mail </label>
                     <input
                     type='email'
                     value={email}
@@ -39,7 +39,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor=''>password</label>
+                    <label htmlFor=''>Password </label>
                     <input
                     type='password'
                     value={password}
@@ -47,7 +47,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor=''>repeat password</label>
+                    <label htmlFor=''>Confirm Password </label>
                     <input
                     type='password'
                     value={passwordConfirmation}

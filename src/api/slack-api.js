@@ -30,3 +30,19 @@ export const login = async (email, password) => {
 
   return [response, errors]
 }
+
+export const getUsers = async (headers) => {
+	let users = [];
+	try {
+		const res = await axios.get(`${API_URL}/users`, {
+			headers: {
+				...headers,
+			},
+		});
+		users = res.data.data;
+	} catch (e) {
+		console.log(e.response);
+	}
+
+	return users;
+};

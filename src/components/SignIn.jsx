@@ -16,7 +16,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className='sigin-div'>
+    <div className='signin-div'>
       <div className='login-form'>
         <h2>Sign in to your Slack</h2>
         <label htmlFor=''>email:</label>

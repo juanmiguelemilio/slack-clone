@@ -5,22 +5,27 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState([])
-  const [flash, setFlash] = useState('')
 
   const handleLogin = async () => {
     const [response, error] = await login(email, password)
     if (error.length) {
       setError(error)
     } else {
-      console.log('login response', response)
-      setFlash('Successful login')
-    }
+      dispatch({
+				type: 'LOGIN',
+				payload: {
+					id: res.data.id,
+					user: res.data,
+					headers: res.headers,
+				},
+			});
+		}
   }
 
   return (
     <div>
       <div>
-        <label htmlFor=''>email:</label>
+        <label htmlFor='email'>E-mail </label>
         <input
           type='email'
           value={email}
@@ -28,7 +33,7 @@ const Login = () => {
         />
       </div>
       <div>
-        <label htmlFor=''>password</label>
+        <label htmlFor='password'>Password </label>
         <input
           type='password'
           value={password}
@@ -36,7 +41,7 @@ const Login = () => {
         />
       </div>
       {error.lg}
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin(e)}>Login</button>
     </div>
   )
 }
