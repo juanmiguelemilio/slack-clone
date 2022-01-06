@@ -1,4 +1,6 @@
 import React from 'react'
+import Channels from './Channels'
+import DirectMessages from './DirectMessages'
 
 const Dashboard = () => {
     return (
@@ -6,11 +8,11 @@ const Dashboard = () => {
             <div className='sidebar-div'>
                 <h2 className='username-greetings'>Hello Sidebar</h2>
                 <div className='channel-div'>
-                    <p>Channel 1</p>
-                    <button>Add channel</button>
+                    <Channels />
+                    
                 </div>
                 <div className='direct-message-div'>
-                    <p>DM 1</p>
+                    <DirectMessages />
                 </div>
             </div>
             <div className='chl-msg-container'>

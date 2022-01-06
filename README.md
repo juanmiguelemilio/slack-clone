@@ -3,8 +3,7 @@ HTML CSS page
 
 
 ## Functions
-[] Sign In
-[] Sign Up (with Google)
+[x] Sign In
 [] Create a channel
 [] Send a message in a channel
 [] Delete a message

@@ -1,17 +1,28 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Navigate } from 'react-router-dom'
 import StartUp from './components/StartUp'
 import UsersContextProvider from './context/UsersContextProvider'
+import { useAuth } from './context/AuthContextProvider'
+import ChannelContextProvider from './context/ChanneContextProvider'
 
 function App() {
-    return (
-    <div>      
+  const { state } = useAuth();
+  let redirectRoute;
+  if (state.login) {
+    redirectRoute = <Navigate replace to='dashboard' />;
+  } else {
+    redirectRoute = <StartUp />;
+  }
+  return (
+  <div>
+    <ChannelContextProvider>    
       <UsersContextProvider>
         <BrowserRouter>
           <StartUp />
         </BrowserRouter>
       </UsersContextProvider>
-    </div>
+    </ChannelContextProvider> 
+  </div>
   )
 }
 

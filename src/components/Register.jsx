@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { register } from '../api/slack-api'
+import { register } from '../api/auth'
 
 const Register = () => {
     const [isLoading, setIsLoading] = useState(false)
