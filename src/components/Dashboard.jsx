@@ -16,7 +16,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className='chl-msg-container'>
-                <h2 className='chl-msg'>Hello Channel / Message Container</h2>
+                <h2 className='chl-msg'>Message Container</h2>
                     <div>
                         <input placeholder='Search'></input>
                     </div>
