@@ -5,13 +5,13 @@ import { useAuth } from './context/AuthContextProvider'
 import ChannelContextProvider from './context/ChanneContextProvider'
 import UsersContextProvider from './context/UsersContextProvider'
 
-import StartUp from './components/StartUp'
+import StartUp from './components/StartUp.jsx.backup'
 import Dashboard from './components/Dashboard'
 import PrivateRoute from './components/PrivateRoute'
-// import Login from './components/Login'
 import Register from './components/Register'
 import DirectMessages from './components/DirectMessages'
 import Channels from './components/Channels'
+import Login from './components/Login'
 
 function App() {
   const { state } = useAuth();
@@ -19,7 +19,7 @@ function App() {
   if (state.login) {
     redirectRoute = <Navigate replace to='/dashboard' />;
   } else {
-    redirectRoute = <StartUp />;
+    redirectRoute = <Login />;
   }
   return (
   <div>
@@ -28,7 +28,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={redirectRoute} />
-            <Route path='dashboard' element={
+            <Route path='/dashboard' element={
 									<PrivateRoute>
 										<Dashboard />
 									</PrivateRoute>}
@@ -37,7 +37,7 @@ function App() {
             <Route path="/messages/:id" element={<DirectMessages />} />
             <Route path="/register" element={<Register />} />
           </Routes>
-          <StartUp />
+          <Login />
         </BrowserRouter>
       </UsersContextProvider>
     </ChannelContextProvider> 

@@ -15,7 +15,7 @@ const StartUp = () => {
 
             <div className='new-user'>
                 <p className='new-to-slack'>New to Slack?</p>
-                <Link to='/Register'>Create an account</Link>
+                <Link to='/register'>Create an account</Link>
             </div>
         </div>
     )

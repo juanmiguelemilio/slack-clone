@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { login } from '../api/auth'
 import { useAuth } from '../context/AuthContextProvider'
+import logo from '../assets/slack-logo.svg'
+import { Link } from 'react-router-dom'
 
 
 const Login = () => {
@@ -28,30 +30,42 @@ const Login = () => {
 
   return (
     <div className='login-div'>
-      <div>
-        <h2>Sign in to your Slack</h2>
-        <label htmlFor='email'>E-mail </label>
+      <img className='slack-logo' src={logo} alt='slack logo'></img>
+      <h2>Sign in to your Slack</h2>
+      
+      <div className='login-inner-div'>
+        <label className='login-label' htmlFor='email'>Email </label>
         <input
+          className='login-input email-inp'
           type='email'
           value={email}
           onChange={(e) => setEmail((t) => e.target.value)}
         />
-      </div>
-      <div>
-        <label htmlFor='password'>Password </label>
+        <div>
+        <label className='login-label' htmlFor='password'>Password </label>
         <input
+          className='login-input password-inp'
           type='password'
           value={password}
           onChange={(e) => setPassword((p) => e.target.value)}
         />
-      </div>
-      {error &&
+        </div>
+        {error &&
 					error.map((e, i) => (
 						<span key={i} className='error'>
 							{e}
 						</span>
 					))}
-      <button onClick={(e) => handleLogin(e)}>Login</button>
+      </div>
+
+      <div>
+        <button className='login-btn' onClick={(e) => handleLogin(e)}>Login</button>
+      </div>
+      <div className='new-user'>
+        <p className='new-to-slack'>New to Slack?</p>
+        <Link to='/register'><span className='create-an-account'>Create an account</span></Link>
+      </div>
+      
     </div>
   )
 }
