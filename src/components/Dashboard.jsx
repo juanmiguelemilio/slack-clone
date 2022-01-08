@@ -1,12 +1,24 @@
 import React from 'react'
+import { useAuth } from '../context/AuthContextProvider'
 import Channels from './Channels'
 import DirectMessages from './DirectMessages'
 
 const Dashboard = () => {
+    const { dispatch } = useAuth()
+    const handleLogout = async (e) => {
+        return dispatch({
+            type: 'LOGOUT',
+        });
+    }
+
     return (
         <div className='dashboard-div'>
             <div className='sidebar-div'>
-                <h2 className='username-greetings'>Hello Sidebar</h2>
+                <div className='user-header-div'>
+                    <h2 className='username-greetings'>Hello Sidebar</h2>
+                    <button className='logout-btn' onClick={(e) => handleLogout(e)}>Logout</button>
+                </div>
+                
                 <div className='channel-div'>
                     <Channels />
                     
