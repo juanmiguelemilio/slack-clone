@@ -105,30 +105,30 @@ const Channels = () => {
 	};
     return (
         <>
-			<div className='card h-full flex flex-col'>
-				<div className='h-16 flex justify-around items-center'>
-					<div>
+			<div className='channel-container'>
+				<div className='channel-top-div'>
+					<div className='channel-inner-top-div'>
 						<button
-							className='btn btn-primary'
+							className=''
 							onClick={toggleMember}
 						>
 							Members
 						</button>
 					</div>
-					<div className='text-white font-bold text-lg'>
+					<div className=''>
 						{channelData.name}
 					</div>
 					<div>
 						<button
-							className='btn btn-primary'
+							className=''
 							onClick={toggleAddMember}
 						>
 							add member
 						</button>
 					</div>
 				</div>
-				<div className='chat-box overflow-y-auto'>
-					<div className='flex flex-col gap-3 px-2'>
+				<div className='channel-message-div			'>
+					<div className=''>
 						{messages &&
 							messages.map((msg, index) => (
 								<div
@@ -140,12 +140,12 @@ const Channels = () => {
 											: 'self-start'
 									}`}
 								>
-									<div className='flex justify-around gap-2 items-center text-white'>
+									<div className=''>
 										{getDay(msg.created_at)}
-										<span className='text-sm'>
+										<span className=''>
 											{msg.sender.email ===
 											state.user.email ? (
-												<span>You</span>
+												<span> You</span>
 											) : (
 												<span>
 													{
@@ -157,7 +157,7 @@ const Channels = () => {
 										</span>
 									</div>
 									<div
-										className='flex chat-bubble'
+										className=''
 										// 	ref={
 										// 		// messages.length - 1 ===
 										// 		// index
@@ -173,15 +173,15 @@ const Channels = () => {
 					</div>
 				</div>
 				<form onSubmit={(e) => handleSend(e)}>
-					<div className='h-20 flex items-center justify-center gap-3'>
+					<div className='write-message-div'>
 						<textarea
 							name=''
-							className='resize-none w-5/6 rounded-lg'
+							className='write-message-box'
 							value={message}
 							onChange={(e) => setMessage(e.target.value)}
 							ref={inputRef}
 						></textarea>
-						<button className='btn btn-primary' type='submit'>
+						<button className='' type='submit'>
 							Send
 						</button>
 					</div>

@@ -4,6 +4,7 @@
   font-family: 'Montserrat';
   /* background-color: gray; */
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,20 +12,14 @@ body {
 }
 
 /* OVERVIEW */
-
 .register-div, .startup-div, .dashboard-div {
   height: 100vh;
   width: 100vw;
 }
 
-.new-user {
-  
-}
-
 /* END OF OVERVIEW */
 
 /* LOGIN */
-
 .slack-logo {
   width: 150px;
 }
@@ -37,10 +32,6 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-}
-
-.login-inner-div {
-  /* background-color: azure; */
 }
 
 .login-input {
@@ -88,11 +79,9 @@ body {
   margin: 10px;
   font-size: small;
 }
-
 /* END OF LOGIN */
 
 /* REGISTER */
-
 .register-div {
   /* background-color: aqua; */
   display: flex;
@@ -148,11 +137,9 @@ body {
   margin: 10px;
   font-size: small;
 }
-
 /* END OF REGISTER */
 
 /* DASHBOARD */
-
 .dashboard-div {
   display: flex;
 }
@@ -170,24 +157,63 @@ body {
 
 .sidebar-div {
   height: 100vh;
-  width: 25vw;
+  width: 20vw;
   background-color: gray;
 }
 
-.username-greetings, .channel-div, .direct-message-div {
-  margin: 25px;
-}
-
-.chl-msg-container {
-  height: 100vh;
-  width: 95vw;
-  background-color: white;
-  display: flex;
-  border-radius: 25px;
-}
-
-.chl-msg {
+.username-greetings {
   margin: 25px;
 }
 
 /* END OF DASHBOARD */
+
+/* MESSAGES */
+.message-container, .channel-container {
+  height: 100vh;
+  width: 80vw;
+}
+
+.write-message-div {
+  display: flex;
+  justify-content: center;
+}
+
+.message-div {
+  background-color: red;
+}
+
+textarea {
+  resize: none;
+  width: 60vw;
+  height: 50px;
+}
+
+/* END OF MESSAGES */
+
+/* CHANNEL */
+.channel-top-div {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.channel-inner-top-div {
+
+}
+
+.channel-message-div {
+  background-color: aqua;
+  height: 80vh;
+  display: flex;
+  align-items: flex-end;  
+}
+
+.self-end {
+  padding: 10px;
+}
+
+.self-start {
+  padding: 10px;
+}
+/* END OF CHANNEL */

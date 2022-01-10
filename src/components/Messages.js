@@ -63,7 +63,7 @@ const Messages = () => {
 	};
 	return (
 		<>
-			<div className=''>
+			<div className='message-container'>
 				<div className=''>
 					{!_.isEmpty(user) && (
 						<span className=''>
@@ -71,8 +71,8 @@ const Messages = () => {
 						</span>
 					)}
 				</div>
-				<div className=''>
-					<div className=''>
+				<div className='message-div'>
+					<div className='message-div'>
 						{messages &&
 							messages.map((msg, index) => (
 								<div

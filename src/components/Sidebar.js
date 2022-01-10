@@ -16,7 +16,7 @@ const Sidebar = () => {
 	const [search, setSearch] = useState('');
 	const [filteredNames, setFilteredNames] = useState([]);
 
-	const { dispatch } = useAuth();
+	const { state, dispatch } = useAuth();
 	const logoutHandler = (e) => {
 		e.preventDefault();
 		dispatch({ type: 'LOGOUT' });
@@ -40,7 +40,8 @@ const Sidebar = () => {
 		<div className=''>
 			<div className=''>
 				<div>
-					
+					<span className=''>{state.user.email}</span>
+					<button className='logout-btn' onClick={(e) => logoutHandler(e)}>Logout</button>
 				</div>
 				<div className=''>
 					<hr className='' />
@@ -125,14 +126,7 @@ const Sidebar = () => {
 				{/* <div className='flex flex-col'>
 					<Link to='/dashboard/messages/'>Send Message</Link>
 				</div> */}
-				<div className=''>
-					<button
-						className=''
-						onClick={(e) => logoutHandler(e)}
-					>
-						Logout
-					</button>
-				</div>
+				
 			</div>
 		</div>
 	);

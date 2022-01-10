@@ -92,7 +92,7 @@ const DirectMessage = () => {
 					)}
 				</div>
 			</div>
-			<div className=''>
+			<div className='direct-message-div'>
 				<div className=''>
 					{messages.map((msg, index) => (
 						<div

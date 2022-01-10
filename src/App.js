@@ -29,39 +29,37 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={redirectRoute} />
+            <Route
+              path='dashboard'
+              element={
+                <PrivateRoute>
+                    <Dashboard />
+                  </PrivateRoute>
+                }
+            >
               <Route
-                  path='dashboard'
-                  element={
-                    <PrivateRoute>
-                      <Dashboard />
-                    </PrivateRoute>
-                  }
-                >
-                  <Route
                     path=''
                     element={<CreateChannel />}/>
-                  <Route
+              <Route
                     path='channels/:id'
                     element={<Channels />}/>
-                  <Route
+              <Route
                     path='messages/:id'
                     element={<Messages />}/>
-                  <Route
+              <Route
                     path='messages/'
                     element={<DirectMessage />}/>
-                </Route>
-                <Route
-                  path='register'
-                  element={
-                    state.login ? (
-                      <Navigate
-                        replace={false}
-                        to='/dashboard'
-                      />
+              </Route>
+              <Route
+                path='register'
+                element={
+                  state.login ? (
+                    <Navigate
+                      replace={false}
+                      to='/dashboard' />
                     ) : (
                       <Register />
-                    )
-                  }/>
+                    )}/>
           </Routes>
           <Login />
         </BrowserRouter>
