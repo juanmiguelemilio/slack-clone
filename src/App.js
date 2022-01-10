@@ -5,7 +5,6 @@ import { useAuth } from './context/AuthContextProvider'
 import ChannelContextProvider from './context/ChanneContextProvider'
 import UsersContextProvider from './context/UsersContextProvider'
 
-import StartUp from './components/StartUp.jsx.backup'
 import Dashboard from './components/Dashboard'
 import PrivateRoute from './components/PrivateRoute'
 import Register from './components/Register'
