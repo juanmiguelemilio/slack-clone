@@ -1,7 +1,8 @@
 import React from 'react'
 import { useAuth } from '../context/AuthContextProvider'
-import Channels from './Channels'
+import Channels from './Channel'
 import DirectMessages from './DirectMessages'
+import Sidebar from './Sidebar'
 
 const Dashboard = () => {
     const { dispatch } = useAuth()
@@ -14,20 +15,22 @@ const Dashboard = () => {
     return (
         <div className='dashboard-div'>
             <div className='sidebar-div'>
+            <Sidebar />
                 <div className='user-header-div'>
-                    <h2 className='username-greetings'>Hello Sidebar</h2>
-                    <button className='logout-btn' onClick={(e) => handleLogout(e)}>Logout</button>
+                    {/* <h2 className='username-greetings'>Hello Sidebar</h2>
+                    <button className='logout-btn' onClick={(e) => handleLogout(e)}>Logout</button> */}
+                    
                 </div>
                 
-                <div className='channel-div'>
+                {/* <div className='channel-div'>
                     <Channels />
                     
                 </div>
                 <div className='direct-message-div'>
                     <DirectMessages />
-                </div>
+                </div> */}
             </div>
-            <div className='chl-msg-container'>
+            {/* <div className='chl-msg-container'>
                 <h2 className='chl-msg'>Message Container</h2>
                     <div>
                         <input placeholder='Search'></input>
@@ -35,7 +38,7 @@ const Dashboard = () => {
                     <div>
                         <input placeholder='Message Channel #'></input>
                     </div>
-            </div>
+            </div> */}
         </div>
     )
 }

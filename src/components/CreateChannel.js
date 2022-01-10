@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createChannel, getUsers } from '../api/slack';
+import { createChannel, getUsers } from '../api/slack-api';
 import { useAuth } from '../context/AuthContextProvider';
 import { useChannels } from '../context/ChannelContextProvider';
 import { FaPlusSquare } from 'react-icons/fa';

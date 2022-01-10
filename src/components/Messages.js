@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useSWR from 'swr';
-import { fetcher, getUser, sendMessage } from '../api/slack';
-import { API_URL } from '../api/url';
+import { fetcher, getUser, sendMessage } from '../api/slack-api';
 import { useAuth } from '../context/AuthContextProvider';
 import { useUsers } from '../context/UsersContextProvider';
 import _ from 'lodash';
+
+const API_URL = 'https://slackapi.avionschool.com/api/v1'
 const Messages = () => {
 	const params = useParams();
 	const { state } = useAuth();

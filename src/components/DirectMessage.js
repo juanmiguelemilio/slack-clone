@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { useEffect, useRef, useState } from 'react';
-import { getUserMessages, sendMessage } from '../api/slack';
+import { getUserMessages, sendMessage } from '../api/slack-api';
 import { useAuth } from '../context/AuthContextProvider';
 import { useUsers } from '../context/UsersContextProvider';
 

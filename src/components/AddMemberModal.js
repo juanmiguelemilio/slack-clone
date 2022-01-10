@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useUsers } from '../context/UsersContextProvider';
 import _ from 'lodash';
-import { addMemberChannel } from '../api/slack';
+import { addMemberChannel } from '../api/slack-api';
 import { useAuth } from '../context/AuthContextProvider';
 
 const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
