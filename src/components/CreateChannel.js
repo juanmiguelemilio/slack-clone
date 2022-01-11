@@ -62,41 +62,35 @@ const CreateChannel = (props) => {
 		setToggleAddUser((toggle) => !toggle);
 	};
 	return (
-		<div className=''>
-			<div className=''>
+		<div className='create-channel-container'>
+			<div className='create-channel-inner'>
+			<h2 className=''>Create Channel</h2>
 				<div className=''>
-					<h1 className=''>Create Channel</h1>
-				</div>
-				<div className=''>
+					
 					<input
 						type='text'
-						className=''
+						className='channel-name-input'
 						placeholder='Channel Name'
 						value={channelName}
 						onChange={(e) =>
 							setChannelName((c) => e.target.value)
-						}
-					/>
+						}/>
+					
 				</div>
 				<div className=''>
-					<span className=''>
-						Add Members
-					</span>
-					<div
-						style={{ color: 'green' }}
-						className=''
-						onClick={(e) => toggleUser(e)}
-					>
-						<FaPlusSquare size={26} />
+					<div className='' onClick={(e) => toggleUser(e)}>
+					{/* <span className=''>
+						Add Members <i class="fas fa-plus"></i>
+					</span> */}
 					</div>
 				</div>
-				{toggleAddUser && (
+				{/* {toggleAddUser && ( */}
 					<div className=''>
 						<div className=''>
 							<input
 								type='text'
-								className=''
-								placeholder='search...'
+								className='search-user-input'
+								placeholder='Search member to add...'
 								onClick={() =>
 									setToggleUserList((t) => !t)
 								}
@@ -105,20 +99,7 @@ const CreateChannel = (props) => {
 									setSearch((s) => e.target.value)
 								}
 							/>
-							<svg
-								className=''
-								xmlns='http://www.w3.org/2000/svg'
-								fill='none'
-								viewBox='0 0 24 24'
-								stroke='currentColor'
-							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									strokeWidth='2'
-									d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
-								/>
-							</svg>
+							{/* <i class="fas fa-search"></i> */}
 						</div>
 						{toggleUserList && (
 							<ul className=''>
@@ -145,7 +126,7 @@ const CreateChannel = (props) => {
 									>
 										<span>{user.email}</span>
 										<button
-											className=''
+											className='add-user-btn'
 											onClick={() =>
 												setUsers(
 													users.filter(
@@ -156,13 +137,13 @@ const CreateChannel = (props) => {
 												)
 											}
 										>
-											Remove
+											<i class="fas fa-backspace"></i>
 										</button>
 									</li>
 								))}
 						</ul>
 					</div>
-				)}
+				{/* )} */}
 
 				<div className=''>
 					<button

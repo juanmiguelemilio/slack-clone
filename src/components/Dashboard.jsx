@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 const Dashboard = () => {
     return (
         <div className='dashboard-div'>
-            <div className='sidebar-div'>
+            <div className=''>
                 <Sidebar />
             </div>
             <div>

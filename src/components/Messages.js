@@ -64,7 +64,7 @@ const Messages = () => {
 	return (
 		<>
 			<div className='message-container'>
-				<div className=''>
+				<div className='user-name-dm channel-top-div'>
 					{!_.isEmpty(user) && (
 						<span className=''>
 							{user.email}
@@ -103,10 +103,10 @@ const Messages = () => {
 					</div>
 				</div>
 				<form onSubmit={(e) => handleSend(e)}>
-					<div className=''>
+					<div className='write-message-div'>
 						<textarea
 							name=''
-							className=''
+							className='write-message-box'
 							value={message}
 							onChange={(e) => setMessage(e.target.value)}
 							ref={inputRef}

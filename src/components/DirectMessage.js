@@ -59,7 +59,7 @@ const DirectMessage = () => {
 		}
 	};
 	return (
-		<div className=''>
+		<div className='channel-container'>
 			<div className=''>
 				<div className=''>
 					<div className=''>

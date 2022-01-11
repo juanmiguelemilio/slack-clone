@@ -9,6 +9,8 @@ import { useUsers } from '../context/UsersContextProvider';
 
 import CustomLink from './CustomLink';
 
+import User from './User'
+
 const Sidebar = () => {
 	const [channelToggle, setChannelToggle] = useState(false);
 	const [msgToggle, setMsgToggle] = useState(false);
@@ -38,15 +40,16 @@ const Sidebar = () => {
 
 	return (
 		<div className='sidebar-container'>
-			<div className='sidebar-inner'>
-				<div className='user-div'>
+			<User />
+			<div className='sidebar-div'>
+				{/* <div className='user-div'>
 					<i class="fas fa-user-circle fa-2x"></i>
 					<span className=''>{state.user.email}</span>
 					<button className='logout-btn' onClick={(e) => logoutHandler(e)}>Logout</button>
 				</div>
 				<div className=''>
 					<hr className='' />
-				</div>
+				</div> */}
 
 				{/* DROPDOWN */}
 				<div
@@ -68,7 +71,7 @@ const Sidebar = () => {
 					</div>
 				</div>
 				{channelToggle && (
-					<ul className=''>
+					<ul className='channel-list'>
 						{channelState.channels.map((channel) => (
 							<div>
 								<li
@@ -110,12 +113,12 @@ const Sidebar = () => {
 							value={search}
 							onChange={(e) => setSearch(e.target.value)}
 							placeholder='Search...'
-							className='input'
+							className='search-input'
 						/>
 						{filteredNames.map((user) => (
 							<li
 								key={user.id}
-								className=''
+								className='user-list'
 							>
 								<CustomLink
 									to={`/dashboard/messages/${user.id}`}
