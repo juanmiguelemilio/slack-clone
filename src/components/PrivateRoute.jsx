@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContextProvider';
 function PrivateRoutes(props) {
 	const { state } = useAuth();
 	if (!state.login) {
-		return <Navigate to='/Dashboard' />;
+		return <Navigate to='/' />;
 	}
 	return props.children;
 }

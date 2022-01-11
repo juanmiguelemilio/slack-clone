@@ -61,7 +61,6 @@ function App() {
                       <Register />
                     )}/>
           </Routes>
-          <Login />
         </BrowserRouter>
       </UsersContextProvider>
     </ChannelContextProvider> 

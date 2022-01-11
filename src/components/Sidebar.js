@@ -37,9 +37,10 @@ const Sidebar = () => {
 	}, [search, users]);
 
 	return (
-		<div className=''>
-			<div className=''>
-				<div>
+		<div className='sidebar-container'>
+			<div className='sidebar-inner'>
+				<div className='user-div'>
+					<i class="fas fa-user-circle fa-2x"></i>
 					<span className=''>{state.user.email}</span>
 					<button className='logout-btn' onClick={(e) => logoutHandler(e)}>Logout</button>
 				</div>
@@ -47,23 +48,23 @@ const Sidebar = () => {
 					<hr className='' />
 				</div>
 
-				<div className=''>
-					<CustomLink to=''>Create Channel</CustomLink>
-				</div>
 				{/* DROPDOWN */}
 				<div
-					className=''
+					className='channel-div'
 					onClick={() => setChannelToggle((t) => !t)}
 				>
 					<div>
-						<span className=''>Channels</span>
+						<i class="fas fa-satellite-dish"></i>
+						<span className=''> Channels </span>
+						<FaAngleRight />
 					</div>
 					<div
 						className={`${
 							channelToggle ? 'rotate-90' : ''
 						} transition-transform p-2 hover:bg-slate-500`}
 					>
-						<FaAngleRight />
+						
+						
 					</div>
 				</div>
 				{channelToggle && (
@@ -82,22 +83,24 @@ const Sidebar = () => {
 								</li>
 							</div>
 						))}
+						<CustomLink to=''>Add channels</CustomLink>
 					</ul>
 				)}
 
 				<div
-					className=''
+					className='direct-message-div'
 					onClick={() => setMsgToggle((t) => !t)}
 				>
-					<div>
-						<span className=''>Direct Messages</span>
+					<div className=''>
+						<i class="fas fa-comment-alt"></i>
+						<span className=''> Direct Messages</span> <FaAngleRight />
 					</div>
 					<div
 						className={`${
 							msgToggle ? 'rotate-90' : ''
 						} transition-all`}
 					>
-						<FaAngleRight />
+						
 					</div>
 				</div>
 				{msgToggle && (

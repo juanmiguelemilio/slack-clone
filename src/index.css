@@ -167,6 +167,38 @@ body {
 
 /* END OF DASHBOARD */
 
+/* SIDEBAR */
+.circle-svg {
+  height: 20px;
+}
+
+.user-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.sidebar-div, .sidebar-container {
+  overflow: scroll;
+}
+/* 
+.user-div {
+  position: fixed;
+} */
+
+.channel-div, .direct-message-div {
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* END OF SIDEBAR */
+
 /* MESSAGES */
 .message-container, .channel-container {
   height: 100vh;
