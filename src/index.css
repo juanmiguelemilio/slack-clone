@@ -234,6 +234,7 @@ ul>li>a {
   justify-content: space-between;
   padding-bottom: 20px;
   align-items: center;
+  background-color: #b3b3b3;
 }
 
 .write-message-div {
@@ -242,10 +243,13 @@ ul>li>a {
 }
 
 .message-div {
-  background-color: red;
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  justify-content: flex-end;
+  height: 78%;
+}
+
+.message-overflow {
+  overflow: scroll;
 }
 
 textarea {
@@ -269,6 +273,7 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 20px;
+  background-color: #b3b3b3;
 }
 
 .channel-top-div {
@@ -276,23 +281,56 @@ textarea {
   align-items: center;
   justify-content: space-around;
   padding: 15px;
-  background: #b3b3b3;
+  background: #979696;
   width: 100%;
   height: 53px;
 }
 
+.channel-message-overflow {
+  overflow: scroll;
+}
+
 .channel-message-div {
-  background-color: aqua;
   display: flex;
-  align-items: flex-end;  
+  justify-content: flex-end;
+  height: 78%;
 }
 
 .self-end {
   padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.message-sent-date {
+  font-size: 11px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.you {
+  font-size: smaller;
+}
+
+.sent-by-user {
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .self-start {
   padding: 10px;
+  background-color: #404040;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .create-channel-container {
@@ -319,9 +357,21 @@ textarea {
   margin: 10px;
 }
 
+.search-user-container {
+  overflow: scroll;
+}
+
 .add-user-btn {
   background: transparent;
   border: none;
   color: white;
 }
 /* END OF CHANNEL */
+
+/* ADD MEMBER MODAL */
+.add-member-container {
+  background-color: #2EB67D;
+  width: 50px;
+  height: 50px;
+}
+/* END OF ADD MEMBER MODAL */

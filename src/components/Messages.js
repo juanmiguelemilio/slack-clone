@@ -72,7 +72,7 @@ const Messages = () => {
 					)}
 				</div>
 				<div className='message-div'>
-					<div className='message-div'>
+					<div className='message-overflow'>
 						{messages &&
 							messages.map((msg, index) => (
 								<div
@@ -84,7 +84,7 @@ const Messages = () => {
 											: 'self-start'
 									}`}
 								>
-									<span className=''>
+									<span className='message-sent-date'>
 										{msg.sender.email ===
 										state.user.email ? (
 											<span>You</span>

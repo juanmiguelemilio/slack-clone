@@ -62,7 +62,7 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 	}, [search, users]);
 
 	return ReactDOM.createPortal(
-		<div className=''>
+		<div className='add-mem-container'>
 			<div className=''>
 				<div className=''>
 					<h1 className=''>Add Member</h1>

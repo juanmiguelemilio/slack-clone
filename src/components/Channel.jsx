@@ -106,29 +106,31 @@ const Channels = () => {
     return (
         <>
 			<div className='channel-container'>
-				<div className='channel-top-div'>
-					<div className='channel-inner-top-div'>
-						<button
-							className=''
-							onClick={toggleMember}
-						>
-							Members
-						</button>
-					</div>
-					<div className=''>
-						{channelData.name}
-					</div>
-					<div>
-						<button
-							className=''
-							onClick={toggleAddMember}
-						>
-							add member
-						</button>
+				<div className='channel-top-container'>
+					<div className='channel-top-div'>
+						<div className='channel-inner-top-div'>
+							<button
+								className=''
+								onClick={toggleMember}
+							>
+								Members
+							</button>
+						</div>
+						<div className=''>
+							{channelData.name}
+						</div>
+						<div>
+							<button
+								className=''
+								onClick={toggleAddMember}
+							>
+								Add member
+							</button>
+						</div>
 					</div>
 				</div>
-				<div className='channel-message-div			'>
-					<div className=''>
+				<div className='channel-message-div'>
+					<div className='channel-message-overflow'>
 						{messages &&
 							messages.map((msg, index) => (
 								<div
@@ -140,12 +142,12 @@ const Channels = () => {
 											: 'self-start'
 									}`}
 								>
-									<div className=''>
+									<div className='message-sent-date'>
 										{getDay(msg.created_at)}
-										<span className=''>
+										<span className='sent-by-user'>
 											{msg.sender.email ===
 											state.user.email ? (
-												<span> You</span>
+												<span className=''> You</span>
 											) : (
 												<span>
 													{
@@ -175,6 +177,7 @@ const Channels = () => {
 				<form onSubmit={(e) => handleSend(e)}>
 					<div className='write-message-div'>
 						<textarea
+							placeholder='Write something...'
 							name=''
 							className='write-message-box'
 							value={message}

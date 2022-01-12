@@ -70,7 +70,7 @@ const CreateChannel = (props) => {
 					<input
 						type='text'
 						className='channel-name-input'
-						placeholder='Channel Name'
+						placeholder='Enter channel name'
 						value={channelName}
 						onChange={(e) =>
 							setChannelName((c) => e.target.value)
@@ -85,8 +85,8 @@ const CreateChannel = (props) => {
 					</div>
 				</div>
 				{/* {toggleAddUser && ( */}
-					<div className=''>
-						<div className=''>
+					<div className='search-user-container'>
+						<div className='search-user-inner'>
 							<input
 								type='text'
 								className='search-user-input'
@@ -101,6 +101,7 @@ const CreateChannel = (props) => {
 							/>
 							{/* <i class="fas fa-search"></i> */}
 						</div>
+						<div>
 						{toggleUserList && (
 							<ul className=''>
 								{filteredEmails &&
@@ -142,6 +143,7 @@ const CreateChannel = (props) => {
 									</li>
 								))}
 						</ul>
+						</div>
 					</div>
 				{/* )} */}
 
@@ -150,7 +152,7 @@ const CreateChannel = (props) => {
 						className=''
 						onClick={(e) => handleSubmit(e)}
 					>
-						Submit
+						Add channel
 					</button>
 				</div>
 			</div>
