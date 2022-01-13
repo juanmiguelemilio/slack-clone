@@ -214,6 +214,14 @@ ul>li>a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #b3b3b3;
+}
+
+li:hover {
+  color: #b3b3b3;
+}
+
 .channel-div, .direct-message-div {
   padding-left: 20px;
   padding-top: 20px;
@@ -221,6 +229,10 @@ ul>li>a {
   vertical-align: middle;
   text-align: center;
   color: #ffffff;
+}
+
+.search-input-sidebar {
+  width: 250px;
 }
 
 /* END OF SIDEBAR */
@@ -293,7 +305,7 @@ textarea {
 .channel-message-div {
   display: flex;
   justify-content: flex-end;
-  height: 78%;
+  height: 100vh;
 }
 
 .self-end {
@@ -370,6 +382,8 @@ textarea {
   width: 300px;
   margin: 10px;
 }
+
+
 
 .search-user-container {
   overflow: scroll;

@@ -113,7 +113,7 @@ const Sidebar = () => {
 							value={search}
 							onChange={(e) => setSearch(e.target.value)}
 							placeholder='Search...'
-							className='search-input'
+							className='search-input-sidebar'
 						/>
 						{filteredNames.map((user) => (
 							<li
