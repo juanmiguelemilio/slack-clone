@@ -305,7 +305,7 @@ textarea {
 .channel-message-div {
   display: flex;
   justify-content: flex-end;
-  height: 100vh;
+  height: 80vh;
 }
 
 .self-end {
