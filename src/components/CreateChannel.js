@@ -65,6 +65,7 @@ const CreateChannel = (props) => {
 		<div className='create-channel-container'>
 			<div className='create-channel-inner'>
 			<h2 className=''>Create Channel</h2>
+			<hr></hr>
 				<div className=''>
 					
 					<input
@@ -85,9 +86,7 @@ const CreateChannel = (props) => {
 					</div>
 				</div>
 				{/* {toggleAddUser && ( */}
-					<div className='search-user-container'>
-						<div className='search-user-inner'>
-							<input
+					<input
 								type='text'
 								className='search-user-input'
 								placeholder='Search member to add...'
@@ -99,6 +98,9 @@ const CreateChannel = (props) => {
 									setSearch((s) => e.target.value)
 								}
 							/>
+					<div className='search-user-container'>
+						<div className='search-user-inner'>
+							
 							{/* <i class="fas fa-search"></i> */}
 						</div>
 						<div>
@@ -146,7 +148,7 @@ const CreateChannel = (props) => {
 						</div>
 					</div>
 				{/* )} */}
-
+				<br></br>
 				<div className=''>
 					<button
 						className=''

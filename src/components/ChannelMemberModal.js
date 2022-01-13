@@ -12,13 +12,14 @@ const ChannelMemberModal = ({ getMembers, setToggleChannelMemberModal }) => {
 		navigate(`/dashboard/messages/${id}`);
 	};
 	return ReactDOM.createPortal(
-		<div className=''>
-			<div className=''>
-				<div className=''>
-					<div className=''>
-						Channel Members
+		<div className='channel-mem-container'>
+			<div className='channel-mem-overflow'>
+				<div className='channel-mem-inner'>
+					<div className='channel-mem-header'>
+						<h3>Channel Members</h3>
+						<hr className='hr-line-channel'></hr>
 					</div>
-					<ul className=''>
+					<ul className='channel-mem-list'>
 						{arr.map((user) => (
 							<li
 								key={user.id}
@@ -29,6 +30,7 @@ const ChannelMemberModal = ({ getMembers, setToggleChannelMemberModal }) => {
 							</li>
 						))}
 					</ul>
+					<br></br>
 					<div className=''>
 						<button
 							className=''

@@ -63,13 +63,25 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 
 	return ReactDOM.createPortal(
 		<div className='add-mem-container'>
-			<div className=''>
-				<div className=''>
-					<h1 className=''>Add Member</h1>
+			<div className='add-mem-inner'>
+				<div className='add-mem-header'>
+					<h3 className=''>Add Member</h3>
+					<hr></hr>
 				</div>
-				<div className=''>
+				<br></br>
+				<input
+							type='text'
+							className='search-user-input'
+							placeholder='Search user...'
+							onFocus={handleFocus}
+							value={search}
+							onChange={(e) =>
+								setSearch((s) => e.target.value)
+							}
+						/>
+				<div className='add-mem-search-overflow'>
 					<div className=''>
-						<input
+						{/* <input
 							type='text'
 							className=''
 							placeholder='Search User...'
@@ -78,7 +90,7 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 							onChange={(e) =>
 								setSearch((s) => e.target.value)
 							}
-						/>
+						/> */}
 						
 					</div>
 					{toggleUserList && (
@@ -106,21 +118,22 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 								className=''
 								onClick={handleRemoveUser}
 							>
-								Remove
+								<i class="fas fa-backspace"></i>
 							</button>
 						</div>
 					</div>
 				)}
-
-				<div className=''>
+				<br></br>
+				<br></br>
+				<div className='add-mem-btn'>
 					<button
-						className=''
+						className='add-mem-btn-close'
 						onClick={closeModal}
 					>
 						Close
 					</button>
 					<button
-						className=''
+						className='add-mem-btn-add'
 						onClick={handleAddMember}
 					>
 						Add
