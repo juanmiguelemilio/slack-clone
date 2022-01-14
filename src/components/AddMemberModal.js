@@ -115,10 +115,9 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 						<div className='text-lg'>{user.email}</div>
 						<div>
 							<button
-								className=''
+								className='add-user-btn'
 								onClick={handleRemoveUser}
-							>
-								<i class="fas fa-backspace"></i>
+							><i class="fas fa-backspace"></i>
 							</button>
 						</div>
 					</div>

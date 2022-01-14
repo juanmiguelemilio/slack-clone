@@ -149,7 +149,7 @@ const Channels = () => {
 											state.user.email ? (
 												<span className=''> You</span>
 											) : (
-												<span>
+												<span> 
 													{
 														msg.sender
 															.email
@@ -159,7 +159,7 @@ const Channels = () => {
 										</span>
 									</div>
 									<div
-										className=''
+										className='message-body-container'
 										// 	ref={
 										// 		// messages.length - 1 ===
 										// 		// index

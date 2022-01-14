@@ -94,7 +94,7 @@ const Messages = () => {
 											</span>
 										)}
 									</span>
-									<div className=''>
+									<div className='message-body-container'>
 										{msg.body}
 									</div>
 								</div>
