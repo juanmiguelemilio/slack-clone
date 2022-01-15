@@ -33,7 +33,7 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 
 	const handleAddMember = async () => {
 		if (_.isEmpty(user)) {
-			alert('You need to add a member!');
+			alert('Please add at least one member');
 		} else {
 			const status = await addMemberChannel(
 				state.headers,
@@ -111,7 +111,7 @@ const AddMemberModal = ({ setToggleAddMemberModal, channelId }) => {
 					)}
 				</div>
 				{!_.isEmpty(user) && (
-					<div className=''>
+					<div className='search-add-mem'>
 						<div className='text-lg'>{user.email}</div>
 						<div>
 							<button

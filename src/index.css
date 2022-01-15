@@ -458,6 +458,10 @@ textarea {
 .add-mem-btn-close {
   margin-right: 10px;
 }
+
+.search-add-mem {
+  display: flex;
+}
 /* END OF ADD MEMBER MODAL */
 
 /* CHANNEL MEMBER MODAL */
@@ -488,3 +492,48 @@ textarea {
 }
 
 /* END OF CHANNEL MEMBER MODAL */
+
+.nav-btn {
+  display: none;
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+  .sidebar-div, .user-div {
+    display: none;
+    display: block;
+  }
+  .channel-container, .channel-message-div {
+    width: 80vw;
+  }
+  .user-div {
+    display: block;
+    width: 20vw;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar-div, .user-div {
+    display: none;
+  }
+  .channel-container, .channel-message-div {
+    width: 100vw;
+  }
+  .channel-container {
+    padding-top: 50px;
+  }
+  .user-div {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+  }
+
+  .nav-btn {
+    display: block;
+  }
+  /* .nav-btn::after {
+    content: '⏎';
+  } */
+}

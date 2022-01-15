@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom'
 import AddMemberModal from './AddMemberModal'
 import ChannelMemberModal from './ChannelMemberModal'
 import useSWR from 'swr'
+// import { Button } from 'react-bootstrap'
+
 
 const API_URL = 'https://slackapi.avionschool.com/api/v1'
 
@@ -110,6 +112,7 @@ const Channels = () => {
 					<div className='channel-top-div'>
 						<div className='channel-inner-top-div'>
 							<button
+								variant="dark"
 								className=''
 								onClick={toggleMember}
 							>
@@ -121,6 +124,7 @@ const Channels = () => {
 						</div>
 						<div>
 							<button
+								variant="dark"
 								className=''
 								onClick={toggleAddMember}
 							>

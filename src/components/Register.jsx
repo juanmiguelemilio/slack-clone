@@ -35,7 +35,7 @@ const Register = () => {
             <Route path="/login" element={<Login />} />
           </Routes> 
             {isLoading ? (
-                <p>Loading ....</p>
+                <p>Loading...</p>
             ) : (
               <div>
                 <div>
